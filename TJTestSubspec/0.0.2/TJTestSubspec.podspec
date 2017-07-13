@@ -29,21 +29,20 @@ EOS
   
   s.ios.deployment_target = '8.0'
 
-  s.default_subspec = 'lib'
+  s.default_subspec = 'framework'
   
   
   #public
-  s.subspec 'lib' do |ss|
+  s.subspec 'source' do |ss|
 
     ss.source_files = 'Classes/*'
-    # ss.public_header_files = 'Classes/TJModule.h'
 
   end
 
-  # s.subspec 'framework' do |ss|
-  #   ss.ios.vendored_frameworks = 'Pod/*.framework'
+  s.subspec 'framework' do |ss|
+    ss.ios.vendored_frameworks = 'ios/TJTestSubspec.embeddedframework/TJTestSubspec.framework'
 
-  # end
+  end
 
   # private
 
